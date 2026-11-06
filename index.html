@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- Aayan Sharma portfolio - INFO1005 Assessment 3 - Home page -->
+<!-- Framework: Bootstrap 5.3 | Fonts: Space Grotesk (headings), Inter (body) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aayan Sharma - Diploma of ICT student and aspiring IT professional. Resume, portfolio and contact details.">
+  <meta name="author" content="Aayan Sharma">
+
+  <!-- Google Fonts: Space Grotesk for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (social, contact and feature icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS comes AFTER Bootstrap so it can override it -->
+  <link href="css/custom.css" rel="stylesheet">
+
+  <title>Aayan Sharma | Aspiring IT Professional</title>
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION (same on every page) ===== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Aayan Sharma</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#portfolioNavbar"
+              aria-controls="portfolioNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="portfolioNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO: name, short intro, tags and call-to-action buttons ===== -->
+  <header id="top" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-7">
+          <p class="eyebrow">Diploma of ICT student</p>
+          <h1>Aayan Sharma</h1>
+          <p class="lead-intro">Aspiring IT professional with a passion for solving problems, organising information and learning new technology.</p>
+          <ul class="hero-tags list-unstyled">
+            <li>Networking</li>
+            <li>Web development</li>
+            <li>IT support</li>
+          </ul>
+          <a class="btn custom-btn me-2 mb-2" href="pdf/aayan-sharma-resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+          <a class="btn custom-btn-secondary mb-2" href="portfolio.html">View my portfolio</a>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div class="hero-figure">
+            <!-- Image: img/hero-it-workspace.jpg (Unsplash, square, 500 x 500) -->
+            <img class="img-fluid hero-portrait" src="img/hero-it-workspace.jpg" width="500" height="500" alt="Laptop screen showing code in a dark editor">
+            <p class="hero-badge mb-0"><i class="bi bi-circle-fill" aria-hidden="true"></i>Open to opportunities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- Highlights strip: four quick facts, overlapping the hero -->
+    <section class="feature-strip" aria-label="Highlights">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+              <div><strong>Diploma of ICT</strong><span>Western Sydney University</span></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-hdd-network-fill" aria-hidden="true"></i>
+              <div><strong>Cisco Networking Academy</strong><span>Certificate of completion</span></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-folder-check" aria-hidden="true"></i>
+              <div><strong>Document management</strong><span>Law In Order, 2025</span></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+              <div><strong>Full work rights</strong><span>Australian citizen</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About me: photo and summary -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-5 reveal">
+            <!-- Image: img/about-networking.jpg (Unsplash, 500 x 375) -->
+            <img class="img-fluid profile-img" src="img/about-networking.jpg" width="500" height="375" alt="Red network patch cables plugged into a rack switch">
+          </div>
+          <div class="col-12 col-lg-7 reveal">
+            <div class="section-heading">
+              <p class="section-label">About me</p>
+              <h2>Motivated, reliable and keen to learn</h2>
+            </div>
+            <p>I am a Diploma of ICT student at Western Sydney University. I completed Year 12 at The Ponds High School in 2025 and hold a Cisco Networking Academy certificate of completion.</p>
+            <p>At Law In Order I sorted, scanned and securely stored legal documents. That work built my organisation, accuracy and attention to detail. I am eager to gain more professional experience and contribute positively to a team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills: icon tiles -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Skills</p>
+          <h2>What I bring to a team</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-puzzle-fill" aria-hidden="true"></i>
+              <h3>Problem-solving</h3>
+              <p>Breaking issues into clear steps and working through them calmly.</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
+              <h3>Effective communication</h3>
+              <p>Explaining ideas clearly and listening to what others need.</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-people-fill" aria-hidden="true"></i>
+              <h3>Teamwork</h3>
+              <p>Collaborating well and following organisational processes.</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-clock-fill" aria-hidden="true"></i>
+              <h3>Time management</h3>
+              <p>Prioritising tasks and finishing work accurately and on time.</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-eye-fill" aria-hidden="true"></i>
+              <h3>Attention to detail</h3>
+              <p>Checking accuracy in everything I handle, from files to code.</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="skill-tile">
+              <i class="bi bi-folder-fill" aria-hidden="true"></i>
+              <h3>Organising information</h3>
+              <p>Handling large volumes of information and keeping it easy to find.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus areas: image cards -->
+    <section id="focus" class="section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Focus areas</p>
+          <h2>What I am learning</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+          <div class="col reveal">
+            <div class="card h-100 portfolio-card">
+              <img src="img/focus-networking.jpg" class="card-img-top" width="800" height="600" alt="Diagram of a router connected to a PC, laptop, printer, phone and server">
+              <div class="card-body">
+                <h3 class="card-title">Networking</h3>
+                <p class="card-text">How routers, switches and devices connect and communicate, from my Cisco Networking Academy course.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="card h-100 portfolio-card">
+              <img src="img/focus-web-development.jpg" class="card-img-top" width="800" height="600" alt="Code editor showing HTML and CSS with a code symbol badge">
+              <div class="card-body">
+                <h3 class="card-title">Web development</h3>
+                <p class="card-text">Building responsive websites with HTML, CSS and Bootstrap, including this portfolio.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="card h-100 portfolio-card">
+              <img src="img/focus-it-support.jpg" class="card-img-top" width="800" height="600" alt="Computer monitor with a tick and a security shield">
+              <div class="card-body">
+                <h3 class="card-title">IT support</h3>
+                <p class="card-text">Developing troubleshooting and clear communication skills through my Diploma of ICT.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="card h-100 portfolio-card">
+              <img src="img/focus-data-organisation.jpg" class="card-img-top" width="800" height="600" alt="Folder containing documents with a checklist card">
+              <div class="card-body">
+                <h3 class="card-title">Data organisation</h3>
+                <p class="card-text">Sorting, scanning and storing documents accurately and securely, as I did at Law In Order.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey: timeline -->
+    <section id="journey" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">My journey</p>
+          <h2>Education and experience so far</h2>
+        </div>
+        <ol class="journey reveal">
+          <li>
+            <span class="when">2025</span>
+            <h3>Year 12 completed</h3>
+            <p>The Ponds High School, NSW.</p>
+          </li>
+          <li>
+            <span class="when">Nov – Dec 2025</span>
+            <h3>Litigation Support Clerk</h3>
+            <p>Casual role at Law In Order Pty Ltd.</p>
+          </li>
+          <li>
+            <span class="when">Completed</span>
+            <h3>Cisco Networking Academy</h3>
+            <p>Certificate of completion.</p>
+          </li>
+          <li>
+            <span class="when">Now</span>
+            <h3>Diploma of ICT</h3>
+            <p>Western Sydney University.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section id="connect" class="section pb-5">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Let's work together</h2>
+          <p>I am looking for opportunities to gain practical IT experience and grow my skills. Have a look at my resume or get in touch.</p>
+          <a class="btn custom-btn me-2 mb-2" href="contact.html">Contact me</a>
+          <a class="btn custom-btn-secondary mb-2" href="resume.html">View my resume</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="footer-brand">Aayan Sharma</p>
+          <p>Diploma of ICT student and aspiring IT professional, based in NSW, Australia.</p>
+          <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com" aria-label="Email Aayan"><i class="bi bi-envelope-fill"></i></a></li>
+            <li><a href="tel:0406702329" aria-label="Call Aayan"><i class="bi bi-telephone-fill"></i></a></li>
+            <li><a href="https://github.com/aayanz675" target="_blank" rel="noopener" aria-label="Aayan on GitHub"><i class="bi bi-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="footer-title">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="footer-title">Get in touch</p>
+          <ul class="footer-links">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com">Aayan.sharma1207@gmail.com</a></li>
+            <li><a href="tel:0406702329">0406 702 329</a></li>
+            <li><a href="pdf/aayan-sharma-resume.pdf" download>Download resume (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note">&copy; 2026 Aayan Sharma | INFO1005 Website Design | Photos from Unsplash. Illustrations are original.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript powers the navbar toggle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Shared script: fade-in on scroll and back-to-top button -->
+  <script src="js/main.js"></script>
+</body>
+</html>

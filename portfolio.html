@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- Aayan Sharma portfolio - INFO1005 Assessment 3 - Portfolio page -->
+<!-- Framework: Bootstrap 5.3 | Fonts: Space Grotesk (headings), Inter (body) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Aayan Sharma - study and work projects in IT, networking and web design.">
+  <meta name="author" content="Aayan Sharma">
+
+  <!-- Google Fonts: Space Grotesk for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (social, contact and feature icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS comes AFTER Bootstrap so it can override it -->
+  <link href="css/custom.css" rel="stylesheet">
+
+  <title>Portfolio | Aayan Sharma</title>
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION (same on every page) ===== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Aayan Sharma</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#portfolioNavbar"
+              aria-controls="portfolioNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="portfolioNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header id="top" class="hero hero-page">
+    <div class="container">
+      <p class="eyebrow">Portfolio</p>
+      <h1>My Work</h1>
+      <p class="lead-intro">A selection of my study and work projects. Select an image to view it larger.</p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container site-content">
+
+    <!-- Project cards: each image opens the lightbox (modal) below -->
+    <section id="projects" class="content-panel">
+      <h2>Projects</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <div class="col reveal">
+          <div class="card h-100 portfolio-card">
+            <button type="button" class="lightbox-trigger"
+                    data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="img/portfolio-cisco-networking.jpg"
+                    data-title="Cisco Networking Academy"
+                    data-alt="Diagram of a router connected to a switch, a server and a PC">
+              <img src="img/portfolio-cisco-networking.jpg" class="card-img-top" width="800" height="600"
+                   alt="Diagram of a router connected to a switch, a server and a PC">
+            </button>
+            <div class="card-body">
+              <h3 class="card-title">Cisco Networking Academy</h3>
+              <p class="card-text">Completed a Cisco Networking Academy course covering networking fundamentals and how devices connect and communicate.</p>
+              <ul class="tech-badges"><li>Networking</li><li>Cisco</li><li>Certificate</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col reveal">
+          <div class="card h-100 portfolio-card">
+            <button type="button" class="lightbox-trigger"
+                    data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="img/portfolio-document-workflow.jpg"
+                    data-title="Document digitisation workflow"
+                    data-alt="Four-step workflow: sort, scan, upload and store documents">
+              <img src="img/portfolio-document-workflow.jpg" class="card-img-top" width="800" height="600"
+                   alt="Four-step workflow: sort, scan, upload and store documents">
+            </button>
+            <div class="card-body">
+              <h3 class="card-title">Document digitisation</h3>
+              <p class="card-text">At Law In Order I sorted, scanned and uploaded legal documents into internal systems, keeping file structures accurate.</p>
+              <ul class="tech-badges"><li>Scanning</li><li>File systems</li><li>Accuracy</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col reveal">
+          <div class="card h-100 portfolio-card">
+            <button type="button" class="lightbox-trigger"
+                    data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="img/portfolio-responsive-website.jpg"
+                    data-title="Responsive portfolio website"
+                    data-alt="Layouts for desktop, tablet and phone screens">
+              <img src="img/portfolio-responsive-website.jpg" class="card-img-top" width="800" height="600"
+                   alt="Layouts for desktop, tablet and phone screens">
+            </button>
+            <div class="card-body">
+              <h3 class="card-title">This portfolio website</h3>
+              <p class="card-text">Built with HTML, CSS and Bootstrap for INFO1005. It adapts to phone, tablet and desktop screens.</p>
+              <ul class="tech-badges"><li>HTML</li><li>CSS</li><li>Bootstrap</li></ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Image credits -->
+    <section id="credits" class="content-panel">
+      <h2>Image Credits</h2>
+      <p>Project images on this page and the focus-area images on the home page are original illustrations created for this portfolio. Photos on the home page are from Unsplash.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== LIGHTBOX (Bootstrap modal) ===== -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-4" id="lightboxTitle">Project image</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="lightboxImg" class="img-fluid w-100" src="img/portfolio-cisco-networking.jpg" width="800" height="600" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="footer-brand">Aayan Sharma</p>
+          <p>Diploma of ICT student and aspiring IT professional, based in NSW, Australia.</p>
+          <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com" aria-label="Email Aayan"><i class="bi bi-envelope-fill"></i></a></li>
+            <li><a href="tel:0406702329" aria-label="Call Aayan"><i class="bi bi-telephone-fill"></i></a></li>
+            <li><a href="https://github.com/aayanz675" target="_blank" rel="noopener" aria-label="Aayan on GitHub"><i class="bi bi-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="footer-title">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="footer-title">Get in touch</p>
+          <ul class="footer-links">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com">Aayan.sharma1207@gmail.com</a></li>
+            <li><a href="tel:0406702329">0406 702 329</a></li>
+            <li><a href="pdf/aayan-sharma-resume.pdf" download>Download resume (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note">&copy; 2026 Aayan Sharma | INFO1005 Website Design | Photos from Unsplash. Illustrations are original.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript powers the navbar toggle and the lightbox modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Shared script: fade-in on scroll and back-to-top button -->
+  <script src="js/main.js"></script>
+
+  <!-- Lightbox script: copies the clicked card's image and title into the modal -->
+  <script>
+    var lightbox = document.getElementById('lightboxModal');
+    lightbox.addEventListener('show.bs.modal', function (event) {
+      var trigger = event.relatedTarget;
+      document.getElementById('lightboxImg').src = trigger.getAttribute('data-img');
+      document.getElementById('lightboxImg').alt = trigger.getAttribute('data-alt');
+      document.getElementById('lightboxTitle').textContent = trigger.getAttribute('data-title');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,792 @@
+/* ==========================================================================
+   Aayan Sharma portfolio - INFO1005 Assessment 3
+   Custom CSS loads AFTER Bootstrap so it can override Bootstrap defaults.
+   Sections: 1 Variables | 2 Base | 3 Navigation | 4 Hero | 5 Feature strip
+             6 Sections and headings | 7 Cards and tiles | 8 Timeline
+             9 Call to action | 10 Buttons | 11 Resume and contact | 12 Footer
+             13 Motion | 14 Responsive
+   ========================================================================== */
+
+/* ===== 1. BRAND VARIABLES =====
+   Palette made in Adobe Color (complementary rule, RGB values).
+   Blue = trust and technology, amber = energy, navy = professional.
+   All text/background pairs checked for WCAG AA contrast (4.5:1 or higher). */
+:root {
+  --brand-primary: #1D4ED8;   /* blue: headings, buttons, links */
+  --brand-secondary: #F59E0B; /* amber: accents, highlights, hover */
+  --brand-dark: #0B1F3A;      /* navy: navbar, footer, body text */
+  --brand-mid: #16397A;       /* lighter navy for gradients */
+  --brand-light: #F4F7FB;     /* page background */
+  --brand-panel: #ffffff;     /* content panel background */
+  --brand-muted: #475569;     /* secondary text */
+  --brand-border: #cbd5e1;    /* borders and dividers */
+  --heading-font: 'Space Grotesk', Arial, sans-serif; /* Google Font for headings */
+  --body-font: 'Inter', Arial, sans-serif;            /* Google Font for body text */
+  --radius: 1.25rem;
+  --shadow-soft: 0 .5rem 1.5rem rgba(11, 31, 58, .08);
+  --shadow-lift: 0 1rem 2rem rgba(11, 31, 58, .16);
+}
+
+/* ===== 2. BASE STYLES ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* stops the sticky navbar covering anchor targets */
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--brand-light);
+  color: var(--brand-dark);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--heading-font);
+}
+
+h1 {
+  color: var(--brand-primary);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--brand-dark);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--brand-dark);
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: var(--brand-muted);
+  font-size: .95rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--brand-primary);
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brand-secondary);
+  outline-offset: 2px;
+}
+
+/* ===== 3. NAVIGATION ===== */
+.navbar {
+  background-color: var(--brand-dark);
+  border-bottom: 4px solid var(--brand-secondary);
+}
+
+.navbar-brand {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-brand:hover {
+  color: var(--brand-secondary);
+}
+
+.navbar-toggler {
+  background-color: var(--brand-secondary);
+}
+
+/* ===== 4. HERO ===== */
+.hero {
+  background-color: var(--brand-dark);
+  background-image:
+    radial-gradient(circle at 85% 10%, rgba(245, 158, 11, .28), transparent 45%),
+    linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+  padding: 5rem 0 7rem;
+  position: relative;
+}
+
+/* Smaller hero for the inner pages */
+.hero-page {
+  padding: 3.5rem 0 5rem;
+}
+
+.eyebrow {
+  color: var(--brand-secondary);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.lead-intro {
+  color: #ffffff;
+  font-size: 1.2rem;
+  max-width: 46rem;
+}
+
+/* Small pill labels under the intro text */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+}
+
+.hero-tags li {
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 2rem;
+  color: #ffffff;
+  font-size: .9rem;
+  line-height: 1.2;
+  padding: .4rem .9rem;
+}
+
+.hero-figure {
+  position: relative;
+}
+
+.hero-portrait,
+.profile-img {
+  border: 8px solid var(--brand-secondary);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+}
+
+/* "Open to opportunities" label sitting on the hero photo */
+.hero-badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-lift);
+  color: var(--brand-dark);
+  font-weight: 600;
+  padding: .55rem 1rem;
+}
+
+.hero-badge i {
+  color: #16a34a;
+  font-size: .7rem;
+  margin-right: .4rem;
+}
+
+/* ===== 5. FEATURE STRIP (overlaps the hero) ===== */
+.feature-strip {
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  align-items: center;
+  background-color: var(--brand-panel);
+  border: 2px solid var(--brand-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.1rem 1.25rem;
+}
+
+.feature-card i {
+  color: var(--brand-primary);
+  font-size: 2rem;
+}
+
+.feature-card strong {
+  display: block;
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+
+.feature-card span {
+  color: var(--brand-muted);
+  font-size: .9rem;
+}
+
+/* ===== 6. SECTIONS AND HEADINGS ===== */
+.section {
+  padding: 4rem 0 1rem;
+}
+
+.section-alt {
+  background-color: var(--brand-panel);
+  margin-top: 3rem;
+  padding: 4rem 0;
+}
+
+.section-label {
+  color: var(--brand-primary);
+  font-weight: 600;
+  letter-spacing: .12em;
+  margin-bottom: .25rem;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+/* Amber underline accent on section headings */
+.section-heading h2::after {
+  background-color: var(--brand-secondary);
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: .6rem;
+  width: 4rem;
+}
+
+.site-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-panel {
+  background-color: var(--brand-panel);
+  border: 2px solid var(--brand-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-panel h2 i {
+  color: var(--brand-secondary);
+  margin-right: .5rem;
+}
+
+/* ===== 7. CARDS AND TILES ===== */
+/* Skill tiles with icons */
+.skill-tile {
+  background-color: var(--brand-panel);
+  border: 2px solid var(--brand-border);
+  border-radius: var(--radius);
+  height: 100%;
+  padding: 1.25rem;
+  text-align: left;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.skill-tile:hover {
+  border-color: var(--brand-secondary);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
+}
+
+.skill-tile i {
+  align-items: center;
+  background-color: var(--brand-dark);
+  border-radius: .9rem;
+  color: var(--brand-secondary);
+  display: inline-flex;
+  font-size: 1.4rem;
+  height: 3rem;
+  justify-content: center;
+  margin-bottom: .75rem;
+  width: 3rem;
+}
+
+.skill-tile h3 {
+  font-size: 1.1rem;
+  margin-bottom: .25rem;
+}
+
+.skill-tile p {
+  color: var(--brand-muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+/* Simple list with dot bullets (used on the resume page) */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  padding: .5rem 0 .5rem 1.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.skill-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: .6rem;
+  height: .6rem;
+  background-color: var(--brand-primary);
+  border-radius: 50%;
+}
+
+/* Image cards (focus areas and portfolio projects) */
+.portfolio-card {
+  border: 2px solid var(--brand-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.portfolio-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-4px);
+}
+
+.portfolio-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Portfolio lightbox trigger: the image is a button that opens the modal */
+.lightbox-trigger {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  width: 100%;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.lightbox-trigger::after {
+  background-color: rgba(11, 31, 58, .75);
+  border-radius: 2rem;
+  bottom: .75rem;
+  color: #ffffff;
+  content: "View larger";
+  font-size: .8rem;
+  font-weight: 600;
+  opacity: 0;
+  padding: .3rem .8rem;
+  position: absolute;
+  right: .75rem;
+  transition: opacity .2s ease;
+}
+
+.lightbox-trigger:hover::after,
+.lightbox-trigger:focus-visible::after {
+  opacity: 1;
+}
+
+/* Small label badges on project cards */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  list-style: none;
+  margin: .75rem 0 0;
+  padding: 0;
+}
+
+.tech-badges li {
+  background-color: var(--brand-light);
+  border: 1px solid var(--brand-border);
+  border-radius: 2rem;
+  color: var(--brand-dark);
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: .3rem .7rem;
+}
+
+/* ===== 8. TIMELINE ===== */
+/* Horizontal journey on desktop, vertical on phones */
+.journey {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.journey li {
+  border-top: 4px solid var(--brand-primary);
+  padding-top: 1.25rem;
+  position: relative;
+}
+
+.journey li::before {
+  background-color: var(--brand-secondary);
+  border: 3px solid var(--brand-panel);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--brand-primary);
+  content: "";
+  height: 1.1rem;
+  left: 0;
+  position: absolute;
+  top: -.62rem;
+  width: 1.1rem;
+}
+
+.journey .when {
+  color: var(--brand-primary);
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.journey h3 {
+  font-size: 1.1rem;
+  margin: .25rem 0;
+}
+
+.journey p {
+  color: var(--brand-muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+/* Timeline style used for experience and education on the resume page */
+.timeline-item {
+  border-left: 6px solid var(--brand-primary);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== 9. CALL TO ACTION BANNER ===== */
+.cta-banner {
+  background-color: var(--brand-dark);
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(245, 158, 11, .25), transparent 40%),
+    linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+  border-radius: 1.5rem;
+  color: #ffffff;
+  padding: 3rem 2rem;
+  text-align: left;
+}
+
+.cta-banner h2 {
+  color: #ffffff;
+}
+
+.cta-banner p {
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+  max-width: 40rem;
+}
+
+/* ===== 10. BUTTONS ===== */
+.custom-btn,
+.custom-btn-secondary {
+  border: 2px solid var(--brand-primary);
+  border-radius: .75rem;
+  font-weight: 600;
+  padding: .6rem 1.2rem;
+}
+
+.custom-btn {
+  background-color: var(--brand-primary);
+  color: #ffffff;
+}
+
+.custom-btn-secondary {
+  background-color: #ffffff;
+  color: var(--brand-primary);
+}
+
+.custom-btn:hover,
+.custom-btn-secondary:hover {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #ffffff;
+}
+
+/* Buttons on dark backgrounds: amber primary, outlined secondary */
+.hero .custom-btn,
+.cta-banner .custom-btn {
+  background-color: var(--brand-secondary);
+  border-color: var(--brand-secondary);
+  color: var(--brand-dark);
+}
+
+.hero .custom-btn-secondary,
+.cta-banner .custom-btn-secondary {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero .custom-btn:hover,
+.hero .custom-btn-secondary:hover,
+.cta-banner .custom-btn:hover,
+.cta-banner .custom-btn-secondary:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--brand-dark);
+}
+
+/* Floating back-to-top button */
+.back-to-top {
+  background-color: var(--brand-secondary);
+  border: 0;
+  border-radius: 50%;
+  bottom: 1.5rem;
+  box-shadow: var(--shadow-lift);
+  color: var(--brand-dark);
+  font-size: 1.25rem;
+  height: 3rem;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 1.5rem;
+  transition: opacity .25s ease;
+  width: 3rem;
+  z-index: 1030;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== 11. RESUME AND CONTACT ===== */
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.contact-list i {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+}
+
+/* Large contact tiles above the form */
+.contact-tile {
+  align-items: flex-start;
+  background-color: var(--brand-panel);
+  border: 2px solid var(--brand-border);
+  border-radius: var(--radius);
+  color: var(--brand-dark);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.contact-tile:hover {
+  border-color: var(--brand-secondary);
+  box-shadow: var(--shadow-lift);
+  color: var(--brand-dark);
+  transform: translateY(-4px);
+}
+
+.contact-tile i {
+  align-items: center;
+  background-color: var(--brand-dark);
+  border-radius: .9rem;
+  color: var(--brand-secondary);
+  display: inline-flex;
+  font-size: 1.5rem;
+  height: 3.25rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 3.25rem;
+}
+
+.contact-tile strong {
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+}
+
+.contact-tile span {
+  color: var(--brand-primary);
+  overflow-wrap: anywhere;
+}
+
+/* Form fields: visible focus in brand colour */
+.form-control:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 .25rem rgba(29, 78, 216, .25);
+}
+
+/* ===== 12. FOOTER ===== */
+.site-footer {
+  background-color: var(--brand-dark);
+  border-top: 4px solid var(--brand-secondary);
+  color: #e2e8f0;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-brand {
+  color: #ffffff;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.footer-title {
+  color: var(--brand-secondary);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: .75rem;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: .4rem;
+}
+
+.footer-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--brand-secondary);
+  text-decoration: underline;
+}
+
+.social-links a {
+  align-items: center;
+  border: 2px solid var(--brand-secondary);
+  border-radius: 50%;
+  color: var(--brand-secondary);
+  display: inline-flex;
+  font-size: 1.15rem;
+  height: 2.6rem;
+  justify-content: center;
+  width: 2.6rem;
+}
+
+.social-links a:hover {
+  background-color: var(--brand-secondary);
+  color: var(--brand-dark);
+}
+
+.footer-note {
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  color: #cbd5e1;
+  font-size: .9rem;
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+}
+
+/* ===== 13. MOTION (fade-in on scroll) =====
+   The "js" class is added by js/main.js, so content stays visible if JavaScript is off. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .skill-tile,
+  .portfolio-card,
+  .contact-tile {
+    transition: none;
+  }
+}
+
+/* ===== 14. RESPONSIVE (media queries) ===== */
+/* Tablet and below */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 3rem 0 6rem;
+  }
+
+  .hero-portrait {
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero-figure {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .journey {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 575.98px) {
+  .content-panel {
+    padding: 1rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+  }
+
+  .cta-banner {
+    padding: 2rem 1.25rem;
+  }
+
+  .journey {
+    border-left: 4px solid var(--brand-primary);
+    grid-template-columns: 1fr;
+    padding-left: 1.5rem;
+  }
+
+  .journey li {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .journey li::before {
+    left: -2.3rem;
+    top: .2rem;
+  }
+}

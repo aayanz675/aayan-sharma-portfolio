@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- Aayan Sharma portfolio - INFO1005 Assessment 3 - Contact page -->
+<!-- Framework: Bootstrap 5.3 | Fonts: Space Grotesk (headings), Inter (body) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Aayan Sharma by email, phone or GitHub, or send a message using the contact form.">
+  <meta name="author" content="Aayan Sharma">
+
+  <!-- Google Fonts: Space Grotesk for headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (social, contact and feature icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS comes AFTER Bootstrap so it can override it -->
+  <link href="css/custom.css" rel="stylesheet">
+
+  <title>Contact | Aayan Sharma</title>
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION (same on every page) ===== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Aayan Sharma</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#portfolioNavbar"
+              aria-controls="portfolioNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="portfolioNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header id="top" class="hero hero-page">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in Touch</h1>
+      <p class="lead-intro">I am looking for opportunities to gain practical IT experience. Send me a message or contact me directly.</p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container site-content">
+
+    <!-- Contact tiles: email, phone, GitHub, resume -->
+    <section id="details" aria-label="Contact details" class="mb-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="col reveal">
+          <a class="contact-tile" href="mailto:Aayan.sharma1207@gmail.com">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <strong>Email</strong>
+            <span>Aayan.sharma1207@gmail.com</span>
+          </a>
+        </div>
+        <div class="col reveal">
+          <a class="contact-tile" href="tel:0406702329">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <strong>Phone</strong>
+            <span>0406 702 329</span>
+          </a>
+        </div>
+        <div class="col reveal">
+          <a class="contact-tile" href="https://github.com/aayanz675" target="_blank" rel="noopener">
+            <i class="bi bi-github" aria-hidden="true"></i>
+            <strong>GitHub</strong>
+            <span>github.com/aayanz675</span>
+          </a>
+        </div>
+        <div class="col reveal">
+          <a class="contact-tile" href="pdf/aayan-sharma-resume.pdf" download>
+            <i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i>
+            <strong>Resume</strong>
+            <span>Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+
+      <!-- Left column: extra information -->
+      <aside class="col-12 col-lg-5">
+        <section id="availability" class="content-panel reveal">
+          <h2><i class="bi bi-calendar-check-fill" aria-hidden="true"></i>Availability</h2>
+          <ul class="contact-list list-unstyled">
+            <li><i class="bi bi-patch-check-fill" aria-hidden="true"></i>Australian citizen with full working rights</li>
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i>Based in NSW, Australia</li>
+            <li><i class="bi bi-person-check-fill" aria-hidden="true"></i>References available on request</li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Right column: contact form -->
+      <div class="col-12 col-lg-7">
+        <section id="form" class="content-panel reveal">
+          <h2><i class="bi bi-send-fill" aria-hidden="true"></i>Send a Message</h2>
+          <p>Fill in the form and your email app will open with your message ready to send.</p>
+
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" name="name" autocomplete="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Your email</label>
+              <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              <div class="invalid-feedback">Please write a message.</div>
+            </div>
+
+            <button type="submit" class="btn custom-btn">Send message</button>
+          </form>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-5">
+          <p class="footer-brand">Aayan Sharma</p>
+          <p>Diploma of ICT student and aspiring IT professional, based in NSW, Australia.</p>
+          <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com" aria-label="Email Aayan"><i class="bi bi-envelope-fill"></i></a></li>
+            <li><a href="tel:0406702329" aria-label="Call Aayan"><i class="bi bi-telephone-fill"></i></a></li>
+            <li><a href="https://github.com/aayanz675" target="_blank" rel="noopener" aria-label="Aayan on GitHub"><i class="bi bi-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <p class="footer-title">Pages</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="footer-title">Get in touch</p>
+          <ul class="footer-links">
+            <li><a href="mailto:Aayan.sharma1207@gmail.com">Aayan.sharma1207@gmail.com</a></li>
+            <li><a href="tel:0406702329">0406 702 329</a></li>
+            <li><a href="pdf/aayan-sharma-resume.pdf" download>Download resume (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note">&copy; 2026 Aayan Sharma | INFO1005 Website Design | Photos from Unsplash. Illustrations are original.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript powers the navbar toggle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Shared script: fade-in on scroll and back-to-top button -->
+  <script src="js/main.js"></script>
+
+  <!-- Contact form: checks the fields, then opens the visitor's email app with the message filled in -->
+  <script>
+    var form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      var subject = 'Message from ' + name + ' via your portfolio';
+      var body = message + '\n\nFrom: ' + name + ' (' + email + ')';
+      window.location.href = 'mailto:Aayan.sharma1207@gmail.com?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
